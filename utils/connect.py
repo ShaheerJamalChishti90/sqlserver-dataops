@@ -1,31 +1,31 @@
-# # import os, logging
-# # import pyodbc
-# # from dotenv import load_dotenv
+# import os, logging
+# import pyodbc
+# from dotenv import load_dotenv
 
 
-# # def create_connection():
-# #     """Create a connection to SQL Server using ODBC Driver 17"""
-# #     load_dotenv()
+# def create_connection():
+#     """Create a connection to SQL Server using ODBC Driver 17"""
+#     load_dotenv()
     
-# #     # Create connection string with ODBC Driver 17
-# #     conn_str = (
-# #         f"DRIVER={{ODBC Driver 17 for SQL Server}};"
-# #         f"SERVER={os.getenv('DB_SERVER')};"
-# #         f"DATABASE={os.getenv('DB_NAME')};"
-# #         f"UID={os.getenv('DB_USER')};"
-# #         f"PWD={os.getenv('DB_PASSWORD')};"
-# #         f"Trusted_Connection=no;"
-# #     )
+#     # Create connection string with ODBC Driver 17
+#     conn_str = (
+#         f"DRIVER={{ODBC Driver 17 for SQL Server}};"
+#         f"SERVER={os.getenv('DB_SERVER')};"
+#         f"DATABASE={os.getenv('DB_NAME')};"
+#         f"UID={os.getenv('DB_USER')};"
+#         f"PWD={os.getenv('DB_PASSWORD')};"
+#         f"Trusted_Connection=no;"
+#     )
     
-# #     try:
-# #         connection = pyodbc.connect(conn_str)
-# #         print(f"Connection has been successfuly established!")
-# #         return connection
+#     try:
+#         connection = pyodbc.connect(conn_str)
+#         print(f"Connection has been successfuly established!")
+#         return connection
 
         
-# #     except Exception as e:
-# #         print(logging.error(f"Connection error: {e}"))
-# #         return None
+#     except Exception as e:
+#         print(logging.error(f"Connection error: {e}"))
+#         return None
 
 
 # import os, logging
@@ -86,7 +86,7 @@ def create_connection():
         # Check SQL Server version
         cursor.execute("SELECT @@VERSION;")
         version = cursor.fetchone()[0]
-        print("🖥️ SQL Server Version:", version)
+        print("🖥️  SQL Server Version:", version)
 
         # Check which database you’re connected to
         cursor.execute("SELECT DB_NAME();")
